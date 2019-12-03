@@ -1,0 +1,30 @@
+@import "../../styles/_variables";
+.navbar{
+  .navbar-brand{
+    letter-spacing: 0.4em;
+    &:hover{
+      color: $primary;
+      transition: 0.4s;
+    }
+  }
+  .navbar-toggler{}
+  #navbarNav{
+    .nav-link{
+      &:hover{
+        color: $primary;
+        transition: 0.4s;
+      }
+    }
+    .active a{
+      color: $secondary;
+      &:hover{
+        color: $primary;
+      }
+    }
+  }
+}
+.gradient-border{
+  height: 4px;
+  width: 100%;
+  background-image: linear-gradient(to right, $primary, $dark);
+}
