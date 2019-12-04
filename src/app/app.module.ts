@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 // Import icons under this line
-import { faArrowDown, faAppleAlt, faCoffee, faEdit, faSquare } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faAppleAlt, faCoffee, faEdit, faSquare, faCode, faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { AppComponent } from './app.component';
@@ -28,6 +28,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 export class AppModule { 
   constructor(private library: FaIconLibrary) {
     // Add an icons to the library for convenient access in other components.
-    library.addIcons(faArrowDown, faAppleAlt, faCoffee, faEdit, faSquare, faInstagram, faLinkedinIn, faGithub );
+    library.addIcons(faArrowDown, faAppleAlt, faCoffee, faEdit, faSquare, faInstagram, faLinkedinIn, faGithub, faCode, faTerminal );
   }
 }
