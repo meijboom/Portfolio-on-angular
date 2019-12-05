@@ -45,14 +45,15 @@
 
 
 .typewriter p {
+  text-align: left;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid $primary; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 3.5s steps(30, end),
-    blink-caret .75s step-end infinite;
+    typing 3.5s steps(30, end) 3s,
+    blink-caret .75s step-end infinite 3s;
 }
 
 /* The typing effect */
