@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 // Import icons under this line
@@ -10,16 +11,19 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TwoWayDataComponent } from './two-way-data/two-way-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    TwoWayDataComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     FontAwesomeModule
   ],
   providers: [],
