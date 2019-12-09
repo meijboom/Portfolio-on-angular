@@ -4,22 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 // Import icons under this line
-import { faArrowDown, faAppleAlt, faCoffee, faEdit, faSquare, faCode, faTerminal } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faAppleAlt, faCoffee, faEdit, faSquare, faCode, faTerminal, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { TwoWayDataComponent } from './two-way-data/two-way-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     FooterComponent,
-    NavbarComponent,
-    TwoWayDataComponent
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +30,6 @@ import { TwoWayDataComponent } from './two-way-data/two-way-data.component';
 export class AppModule { 
   constructor(private library: FaIconLibrary) {
     // Add an icons to the library for convenient access in other components.
-    library.addIcons(faArrowDown, faAppleAlt, faCoffee, faEdit, faSquare, faInstagram, faLinkedinIn, faGithub, faCode, faTerminal );
+    library.addIcons(faArrowDown, faAppleAlt, faCoffee, faEdit, faSquare, faInstagram, faLinkedinIn, faGithub, faCode, faTerminal, faAngleDoubleRight );
   }
 }

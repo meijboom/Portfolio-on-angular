@@ -1,69 +1,123 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
 @import "../../styles/_variables";
+
 .box-style {
+  animation: transitionIn 3s;
+  display: block;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
   text-align: center;
   text-shadow: 1px 0px 7px rgba(0, 0, 0, 1),
-               3px 2px 15px rgba(255, 255, 255, 0.8),
-               0px 0px 10px rgba(255, 255, 255, 0.1);
+    3px 2px 15px rgba(255, 255, 255, 0.8),
+    0px 0px 10px rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  color: $light;
+
   .color-primary {
     color: $primary;
   }
 }
+
 .landingpage {
-  font-family: 'montserrat' ;
-  height: 100vh;
+  font-family: 'montserrat';
+  height: 91vh;
   width: 100vw;
   background: url(../../assets/IMGS/CodeBG.jpg);
   background-position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+
   hr {
     border: 0px;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
   }
-  h1{
+
+  h1 {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 0.2em;
   }
+
   .row:nth-of-type(1) {
-    padding-top: calc(25vh - 50px); /*for navbar height */
+    padding-top: calc(25vh - 50px);
+    /*for navbar height */
   }
+
   .row:nth-of-type(2) {
     margin-top: 60px;
   }
+
+  .welcome-msg {
+    .typewriter p{
+      text-align: left;
+      overflow: hidden;
+      /* Ensures the content is not revealed until the animation */
+      border-right: .15em solid $primary;
+      /* The typwriter cursor */
+      white-space: nowrap;
+      /* Keeps the content on a single line */
+      margin: 0 auto;
+      /* Gives that scrolling effect as the typing happens */
+      letter-spacing: .15em;
+      /* Adjust as needed */
+      animation:
+        typing 2.5s steps(30, end),
+        blink-caret .75s step-end infinite;
+
+    }
+  }
+  .enter-btn:hover{
+    transition: 0.7s;
+    color: $light;
+    border: 1px solid $primary;
+    & fa-icon {
+      color: $primary;
+    }
+  }
 }
 
+// transition in
+@keyframes transitionIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
 
+  1% {
+    display: block;
+    opacity: 0;
+  }
 
-.typewriter p {
-  text-align: left;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid $primary; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(30, end) 3s,
-    blink-caret .75s step-end infinite 3s;
+  100% {
+    display: block;
+    opacity: 1;
+  }
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: $primary; }
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: $primary;
+  }
 }
