@@ -1,0 +1,21 @@
+@import "../../../styles/variables";
+.container {
+  height: 400px;
+  width: auto;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-color: $primary;
+  color: $light;
+  h1 {
+    color: $primary;
+  }
+  .nav-item a:focus{
+    background-color: $light;
+    color: red;
+  }
+  .tab-content{
+    background-color: $light;
+    color: $dark;
+    height: 100%;
+  }
+}

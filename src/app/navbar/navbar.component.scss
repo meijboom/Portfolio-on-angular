@@ -1,5 +1,6 @@
 @import "../../styles/_variables";
 .navbar{
+  background-color: $dark;
   .navbar-brand{
     letter-spacing: 0.4em;
     &:hover{

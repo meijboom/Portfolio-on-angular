@@ -11,13 +11,17 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BoxStyleComponent } from './components/box-style/box-style.component';
+import { AboutPageComponent } from './components/about-page/about-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    BoxStyleComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
